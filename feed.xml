@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-24T18:15:06+02:00</updated><id>http://localhost:4000/</id><title type="html">Robin Rampaer</title><subtitle>Product | Data | Running</subtitle><entry><title type="html">A/B Testing - The definitive guide to improving your product</title><link href="http://localhost:4000/how-to-use-ab-testing-to-make-your-product-funnel-better" rel="alternate" type="text/html" title="A/B Testing - The definitive guide to improving your product" /><published>2018-06-24T12:18:00+02:00</published><updated>2018-06-24T12:18:00+02:00</updated><id>http://localhost:4000/how-to-use-ab-testing-to-make-your-product-funnel-better</id><content type="html" xml:base="http://localhost:4000/how-to-use-ab-testing-to-make-your-product-funnel-better">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-24T19:12:40+02:00</updated><id>http://localhost:4000/</id><title type="html">Robin Rampaer</title><subtitle>Product | Data | Running</subtitle><entry><title type="html">A/B Testing - The definitive guide to improving your product</title><link href="http://localhost:4000/how-to-use-ab-testing-to-make-your-product-funnel-better" rel="alternate" type="text/html" title="A/B Testing - The definitive guide to improving your product" /><published>2018-06-24T12:18:00+02:00</published><updated>2018-06-24T12:18:00+02:00</updated><id>http://localhost:4000/how-to-use-ab-testing-to-make-your-product-funnel-better</id><content type="html" xml:base="http://localhost:4000/how-to-use-ab-testing-to-make-your-product-funnel-better">&lt;blockquote&gt;
   &lt;p&gt;Go from &lt;strong&gt;“we think”&lt;/strong&gt; to &lt;strong&gt;“we know how much”&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -43,10 +43,12 @@
 &lt;p&gt;Let’s get practical and do it for &lt;a href=&quot;https://trana.glitch.me?ref=ab-testing-bp&quot; target=&quot;_blank&quot;&gt;Trana&lt;/a&gt;, the example we’ll use for this post.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/important-funnel-step.png&quot; alt=&quot;important-funnel-step&quot; title=&quot;important-funnel-step&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;display: block; text-align: center; margin-top: -2.5em; margin-bottom: 2em; font-size: 0.8em; color: grey&quot;&gt;Getting Started - Connecting Strava - Onboarding&lt;/div&gt;
 
 &lt;p&gt;Trana is a Facebook Messenger &lt;em&gt;ChatApp&lt;/em&gt; that provides extra running insights to its users. To do so it connects to their Strava account. Therefore, the moment at which we ask users to link their account is key. On top of this instinctive rationale, let’s analyze our full onboarding funnel. This can be done in a tool such as Mixpanel after having &lt;a href=&quot;https://segment.com/academy/intro/how-to-create-a-tracking-plan/&quot; target=&quot;_blank&quot;&gt;designed a tracking plan&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/full-funnel-conversion.png&quot; alt=&quot;full-funnel-conversion&quot; title=&quot;full-funnel-conversion&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;display: block; text-align: center; margin-top: -2.5em; margin-bottom: 2em; font-size: 0.8em; color: grey&quot;&gt;Funnel analysis in Mixpanel&lt;/div&gt;
 
 &lt;p&gt;We can see that linking the account, going from &lt;em&gt;Onboarding Started&lt;/em&gt; to &lt;em&gt;Strava Connected&lt;/em&gt;, is the most impactful action both in absolute and relative terms. Got your own important step? Let’s continue!&lt;/p&gt;
 
@@ -60,6 +62,7 @@
 &lt;p&gt;In short: optimize with the end, not the very next step, in mind.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/key-step-click-through-probability.png&quot; alt=&quot;key-step-click-through-probability&quot; title=&quot;key-step-click-through-probability&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;display: block; text-align: center; margin-top: -2.5em; margin-bottom: 2em; font-size: 0.8em; color: grey&quot;&gt;80% connect their Strava account, let's improve that&lt;/div&gt;
 
 &lt;p&gt;We have seen from the full funnel that the CTP is 80%. In this case connecting their Strava account is clearly an important milestone so we can use this conversion probability as target metric.&lt;/p&gt;
 
@@ -102,6 +105,7 @@ This is leading teams to bad conclusions because the people coming to your produ
 &lt;p&gt;Wait until both variations have sufficient sample size and proceed to the data collection.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/control-experiment-results.png&quot; alt=&quot;control-experiment-results&quot; title=&quot;control-experiment-results&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;display: block; text-align: center; margin-top: -2.5em; margin-bottom: 2em; font-size: 0.8em; color: grey&quot;&gt;Breakdown of CTP per version&lt;/div&gt;
 
 &lt;p&gt;The experiment conversion is better. It’s a first good sign but we can’t stop there. So let’s proceed to a few checks.&lt;/p&gt;
 
@@ -114,6 +118,7 @@ This is leading teams to bad conclusions because the people coming to your produ
 &lt;p&gt;To assess whether the experiment is outperforming the control, plug your figures into the following formulas. d&lt;em&gt;min&lt;/em&gt; is the minimum detectable effect, N is the sample size, and X the conversion &lt;strong&gt;count&lt;/strong&gt;, the number of people who took the desired action.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/images/ab-testing-results.png&quot; alt=&quot;ab-testing-results&quot; title=&quot;ab-testing-results&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;display: block; text-align: center; margin-top: -2.5em; margin-bottom: 2em; font-size: 0.8em; color: grey&quot;&gt;Statistical but no practical significance&lt;/div&gt;
 
 &lt;p&gt;Where d̂ ± m is the confidence interval.&lt;/p&gt;
 
