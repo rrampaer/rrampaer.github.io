@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-24T14:54:12+02:00</updated><id>http://localhost:4000/</id><title type="html">Robin Rampaer</title><subtitle>Product | Data | Running</subtitle><entry><title type="html">A/B Testing - The definitive guide to improving your product</title><link href="http://localhost:4000/how-to-use-ab-testing-to-make-your-product-funnel-better" rel="alternate" type="text/html" title="A/B Testing - The definitive guide to improving your product" /><published>2018-06-24T12:18:00+02:00</published><updated>2018-06-24T12:18:00+02:00</updated><id>http://localhost:4000/how-to-use-ab-testing-to-make-your-product-funnel-better</id><content type="html" xml:base="http://localhost:4000/how-to-use-ab-testing-to-make-your-product-funnel-better">&lt;blockquote&gt;
+  &lt;p&gt;Go from &lt;strong&gt;“we think”&lt;/strong&gt; to &lt;strong&gt;“we know how much”&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;whether-you-are-in-product-design-or-growth-you-probably-come-across-the-following-questions&quot;&gt;Whether you are in product, design or growth, you probably come across the following questions:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How could we increase our conversion rate?&lt;/li&gt;
+  &lt;li&gt;How can we improve our &lt;a href=&quot;https://fr.slideshare.net/dmc500hats/startup-metrics-for-pirates-long-version/19-Product_ulliQ_how_do_you&quot; target=&quot;_blank&quot;&gt;AARRR&lt;/a&gt; funnel?&lt;/li&gt;
+  &lt;li&gt;How successful has this feature launch been?&lt;/li&gt;
+  &lt;li&gt;Have these notifications increased retention?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;you-can-get-answers-to-those-questions-by-correctly-designing-running-and-interpreting-ab-tests&quot;&gt;You can get answers to those questions by correctly designing, running, and interpreting A/B tests&lt;/h3&gt;
+&lt;p&gt;All you need to get started on your testing journey is:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Basic statistics understanding&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Accurate and sufficient (&amp;gt;1000 monthly unique users) product data&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The approach taken is rigorous and encourages best practices but:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;It will not&lt;/strong&gt; demonstrate the maths behind frequentist hypothesis testing.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;It will not&lt;/strong&gt; cover more advanced aspects such as A/B in a Bayesian context, multivariate-testing or Bonferroni correction.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ready? Let’s get started!&lt;/p&gt;
+
+&lt;h2 id=&quot;0-understand-that-split-testing-is-a-quantitative-way-to-improve-your-product-and-that-its-easy-to-get-it-wrong&quot;&gt;0. Understand that split testing is a quantitative way to improve your product and that it’s easy to get it wrong&lt;/h2&gt;
+&lt;p&gt;At its core, A/B testing is a way to compare two versions of a flow in your user journey in order to determine which one performs best.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/what-ab-test.webp&quot; alt=&quot;ab-testing-concept&quot; title=&quot;ab-testing-concept&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To be able to get insights from your tests you will need &lt;strong&gt;enough people in each group&lt;/strong&gt; (called &lt;em&gt;control&lt;/em&gt; and &lt;em&gt;experiment&lt;/em&gt; group, respectively) and &lt;strong&gt;enough of a conversion difference&lt;/strong&gt;. Both values should be defined &lt;strong&gt;before&lt;/strong&gt; running your test, as you’re about to see in point 3.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-select-an-important-conversion-step-from-your-products-funnel&quot;&gt;1. Select an important conversion step from your product’s funnel&lt;/h2&gt;
+&lt;p&gt;Technically you can test anything, like changing the font on your terms and conditions page. However, you always want to pick the steps with the highest impact on your business outcome. Also, keep in mind the importance of &lt;strong&gt;data quantity&lt;/strong&gt; - the higher the traffic the faster the conclusions - and of &lt;strong&gt;data quality&lt;/strong&gt; - garbage in, garbage out.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Bad data, bad conclusions. Few data, slow conclusions.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Let’s get practical and do it for &lt;a href=&quot;https://trana.glitch.me?ref=ab-testing-bp&quot; target=&quot;_blank&quot;&gt;Trana&lt;/a&gt;, the example we’ll use for this post.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/important-funnel-step.png&quot; alt=&quot;important-funnel-step&quot; title=&quot;important-funnel-step&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Trana is a Facebook Messenger &lt;em&gt;ChatApp&lt;/em&gt; that provides extra running insights to its users. To do so it connects to their Strava account. Therefore, the moment at which we ask users to link their account is key. On top of this instinctive rationale, let’s analyze our full onboarding funnel. This can be done in a tool such as Mixpanel after having &lt;a href=&quot;https://segment.com/academy/intro/how-to-create-a-tracking-plan/&quot; target=&quot;_blank&quot;&gt;designed a tracking plan&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/full-funnel-conversion.png&quot; alt=&quot;full-funnel-conversion&quot; title=&quot;full-funnel-conversion&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can see that linking the account, going from &lt;em&gt;Onboarding Started&lt;/em&gt; to &lt;em&gt;Strava Connected&lt;/em&gt;, is the most impactful action both in absolute and relative terms. Got your own important step? Let’s continue!&lt;/p&gt;
+
+&lt;h2 id=&quot;2-analyse-the-current-click-through-probability-from-this-step-to-a-desired-action&quot;&gt;2. Analyse the current &lt;em&gt;Click-through-probability&lt;/em&gt; from this step to a desired action&lt;/h2&gt;
+&lt;p&gt;The Click-through-probability (CTP) is the probability a given user clicks to get to the next step.&lt;/p&gt;
+
+&lt;p&gt;Its value is always between 0 and 1. It’s therefore &lt;strong&gt;not&lt;/strong&gt; the same as the click-through-rate (CTR) which is the #clicks/#impression.&lt;/p&gt;
+
+&lt;p&gt;The CTP needs to be from the chosen step to a crucial action, not necessarily to the very next step, because you might otherwise end up at a local maximum. Here’s a simple example to understand this: let’s say that you now automatically redirect people from the home page to the pricing/premium page of your product. Your home to pricing conversion will be through the roof but you might want to assess whether people are in turn more likely to become premium users.&lt;/p&gt;
+
+&lt;p&gt;In short: optimize with the end, not the very next step, in mind.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/key-step-click-through-probability.png&quot; alt=&quot;key-step-click-through-probability&quot; title=&quot;key-step-click-through-probability&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We have seen from the full funnel that the CTP is 80%. In this case connecting their Strava account is clearly an important milestone so we can use this conversion probability as target metric.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-construct-a-hypothesis-to-kickstart-your-experiment&quot;&gt;3. Construct a hypothesis to kickstart your experiment&lt;/h2&gt;
+&lt;p&gt;AB testing is nothing but methodologically assess whether a variation, called &lt;strong&gt;experiment&lt;/strong&gt;, performs better than the current situation, called &lt;strong&gt;control&lt;/strong&gt;.&lt;br /&gt;
+An experiment starts by constructing a hypothesis. It can arise from gut-feeling, customers feedback or team discussions.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/experiment-hypothesis.png&quot; alt=&quot;experiment-hypothesis&quot; title=&quot;experiment-hypothesis&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The hypothesis is the following: &lt;em&gt;By seeing how Trana can help them run smarter, users will be less reluctant to connect their Strava account&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4-determine-the-sample-size&quot;&gt;4. Determine the sample size&lt;/h2&gt;
+&lt;p&gt;This is the heart of A/B testing and the most jargon-heavy part of this guide. I’ll be happy to answer &lt;a href=&quot;https://twitter.com/home?status=%40RobinRamp%20thanks%20for%20your%20product%20ab%20testing%20guide%20(http%3A//bit.ly/pabtest).%20Question%3A%20xxx%20&quot; target=&quot;_blank&quot;&gt;any question you might ask on twitter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Running an A/B test involves creating a control and an experiment &lt;strong&gt;sample&lt;/strong&gt;.&lt;br /&gt;
+&lt;em&gt;Sampling&lt;/em&gt;, assigning each user to one variation, will be done by splitting your users into two groups.&lt;br /&gt;
+One user should always see the same variation, meaning that the &lt;strong&gt;sampling is deterministic&lt;/strong&gt;, not simply with a 50% probability.&lt;br /&gt;
+We usually sample according to odd/even IDs, many tools can take care of that for you.&lt;/p&gt;
+
+&lt;p&gt;A common mistake is to ignore sampling, directly change your product, and compare the new conversion probabilities with old ones. &lt;br /&gt;
+This is leading teams to bad conclusions because the people coming to your product are changing across time. For example, you can’t say that the new flow (used by people coming from ads) is worst that the old one (that was used by your friends and family) because the seeing it are way less likely to bear with your product to begin with.&lt;/p&gt;
+
+&lt;p&gt;Your sample size will be determined by:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Your baseline conversion rate&lt;/li&gt;
+  &lt;li&gt;The absolute &lt;em&gt;minimum detectable effect&lt;/em&gt; (MDE/d&lt;em&gt;min&lt;/em&gt;) you pick. This is the minimum difference between control and experiment conversion rates you will be able to detect. If you have a lot of weekly traffic (vs the resulting sample size) pick the smallest difference you feel is worth. If you don’t, pick a difference that results in reasonably small sample size but still seems achievable.&lt;/li&gt;
+  &lt;li&gt;Alpha (α): By default keep it as 95%&lt;/li&gt;
+  &lt;li&gt;Beta (β): By default keep is as 20% which gives a 80% value for 1-β&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/sample-size-computation.png&quot; alt=&quot;sample-size-computation&quot; title=&quot;sample-size-computation&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The test will be run until &lt;strong&gt;both&lt;/strong&gt; samples have a least 1030 observations. From the historic traffic you can assess how long that’ll be. Try to keep experiments running less than one month. The faster they run, the faster your product improves.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.evanmiller.org/ab-testing/sample-size.html&quot;&gt;Compute your sample size&lt;/a&gt;, write it down and let the testing begin. Once you have sufficient data you can analyze the results.&lt;/p&gt;
+
+&lt;h2 id=&quot;5-get-valid-insights-from-your-results&quot;&gt;5. Get valid insights from your results&lt;/h2&gt;
+&lt;h4 id=&quot;51-collect-the-data&quot;&gt;5.1 Collect the data.&lt;/h4&gt;
+&lt;p&gt;Wait until both variations have sufficient sample size and proceed to the data collection.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/control-experiment-results.png&quot; alt=&quot;control-experiment-results&quot; title=&quot;control-experiment-results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The experiment conversion is better. It’s a first good sign but we can’t stop there. So let’s proceed to a few checks.&lt;/p&gt;
+
+&lt;h4 id=&quot;52-make-sure-your-sampling-worked-as-intended&quot;&gt;5.2 Make sure your sampling worked as intended.&lt;/h4&gt;
+&lt;p&gt;First, check that the sampling was not biased towards one of the groups. Here is the computation for our example:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/sanity-check-invariants.png&quot; alt=&quot;sanity-check-invariants&quot; title=&quot;sanity-check-invariants&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;53-check-if-the-experiment-performed-significantly-better&quot;&gt;5.3 Check if the experiment performed significantly better.&lt;/h4&gt;
+&lt;p&gt;To assess whether the experiment is outperforming the control, plug your figures into the following formulas. d&lt;em&gt;min&lt;/em&gt; is the minimum detectable effect, N is the sample size, and X the conversion &lt;strong&gt;count&lt;/strong&gt;, the number of people who took the desired action.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/ab-testing-results.png&quot; alt=&quot;ab-testing-results&quot; title=&quot;ab-testing-results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Where d̂ ± m is the confidence interval.&lt;/p&gt;
+
+&lt;p&gt;Here is how to interpret results:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;d̂ - m &amp;gt; d&lt;em&gt;𝑚𝑖𝑛&lt;/em&gt;:&lt;br /&gt;
+The experiment is outperforming the control (&lt;strong&gt;statistical&lt;/strong&gt; and &lt;strong&gt;practical&lt;/strong&gt; significance). Change flow to new version.&lt;/li&gt;
+  &lt;li&gt;d̂ - m &amp;gt; 0:&lt;br /&gt;
+The experiment is outperforming the control (&lt;strong&gt;statistical&lt;/strong&gt; significance only). This is the case in &lt;strong&gt;our example&lt;/strong&gt;. To get practical significance you can let the test run longer. You can also make a judgement call and go with your gut feeling.&lt;/li&gt;
+  &lt;li&gt;d̂ - m &amp;lt; 0:&lt;br /&gt;
+You can’t say that the experiment is outperforming the control. Keep the original version and generate new hypotheses.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;6-communicate-your-results&quot;&gt;6. Communicate your results.&lt;/h2&gt;
+&lt;p&gt;Whatever the outcome, &lt;strong&gt;always&lt;/strong&gt; communicate and document.&lt;/p&gt;
+
+&lt;p&gt;I recommend that you signal when the test starts and when it ends, using these key moments as an opportunity for stakeholders to voice their ideas and be up-to-date with the latest changes.&lt;/p&gt;
+
+&lt;p&gt;Also, always document and archive. You want the testing process to outlive you so that anyone taking over has a library of experiments to learn from.&lt;/p&gt;
+
+&lt;h3 id=&quot;this-guide-was-made-possible-thanks-to-these-amazing-resources&quot;&gt;This guide was made possible thanks to these amazing resources:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://eu.udacity.com/course/ab-testing--ud257&quot; target=&quot;_blank&quot;&gt;Udacity’s A/B Testing Class&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.evanmiller.org/ab-testing/&quot; target=&quot;_blank&quot;&gt;Evan Miller’s awesome A/B Testing Tools&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;heres-how-you-can-go-further&quot;&gt;Here’s how you can go further:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.evanmiller.org/sequential-ab-testing.html&quot; target=&quot;_blank&quot;&gt;Use Sequential Testing to Fasten Results&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.evanmiller.org/sequential-ab-testing.html&quot; target=&quot;_blank&quot;&gt;Understand Type I and Type II Errors&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Robin Rampaer</name></author><category term="guides" /><summary type="html">Go from “we think” to “we know how much”.</summary></entry><entry><title type="html">A Strava Segment Twitter Bot</title><link href="http://localhost:4000/a-strava-segment-twitter-bot" rel="alternate" type="text/html" title="A Strava Segment Twitter Bot" /><published>2016-11-26T11:18:00+01:00</published><updated>2016-11-26T11:18:00+01:00</updated><id>http://localhost:4000/a-strava-segment-twitter-bot</id><content type="html" xml:base="http://localhost:4000/a-strava-segment-twitter-bot">&lt;p&gt;&lt;img src=&quot;assets/images/bsb.PNG&quot; alt=&quot;bsb&quot; title=&quot;Brussels Segments Scanner&quot; /&gt;
+Brussels Strava Bot is a twitter bot that performs daily checks for changes in &lt;a href=&quot;https://www.strava.com&quot; target=&quot;_blank&quot;&gt;Strava&lt;/a&gt;’s (a popular running app) segments’ leaderboards changes.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-a-bot-anyway&quot;&gt;What is a bot anyway?&lt;/h2&gt;
+&lt;p&gt;Because the word tends to be way overused, agreeing on a definition is always a first step, therefore by bot I will always imply the following:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A bot is an application that performs an automated task across disparate systems&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Tasks are usually thought of as being time-based and performed by a &lt;a href=&quot;https://en.wikipedia.org/wiki/Cron&quot; target=&quot;_blank&quot;&gt;cron&lt;/a&gt;, a job scheduler in Unix-like computer operating systems. However, if you think of IT automation as the linking of disparate systems and software in such a way that they become self-acting or self-regulating, your fridge (that self-adjusts for a given temperature) or even my henhouse’s door (that opens as the sun rises) are “bots”.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you think of IT automation as the linking of disparate systems and software in such a way that they become self-acting or self-regulating, your fridge is a “bot”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;how-to-harness-social-medias-data-to-create-almost-always-useless-bots&quot;&gt;How to harness social media’s data to create (almost-always-useless) bots?&lt;/h2&gt;
+
+&lt;h3 id=&quot;example-here-perform-a-periodic-check-of-stravas-segments-leaderboards&quot;&gt;Example here: perform a periodic check of Strava’s segments’ leaderboards&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get_last_pairs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;SELECT * FROM duo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fetchall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get_changed_leaders&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;changes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eachRow&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://www.strava.com/api/v3/segments/&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eachRow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/leaderboard&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Authorization&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stravaAuth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;#Compare them with last DB version, capture changes&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;entries&quot;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;SystemExit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            
+        &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;entries&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Can't find leaderboard for segment &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eachRow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;entries&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;athlete_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eachRow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;change&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eachRow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;entries&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;athlete_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;entries&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;athlete_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;entries&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;elapsed_time&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;entries&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;distance&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;changes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;when-and-how-is-this-task-run&quot;&gt;When and how is this task run?&lt;/h3&gt;
+&lt;p&gt;In this case, the job is run using &lt;a href=&quot;https://www.pythonanywhere.com&quot; target=&quot;_blank&quot;&gt;Python Anywhere&lt;/a&gt;, it is service that allows one to host, run, and code Python in the cloud. They have a free “beginner” plan.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/schedule.png&quot; alt=&quot;schedule&quot; title=&quot;Schedule&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-the-task-performed-when-a-segment-record-has-been-beaten&quot;&gt;What is the task performed when a segment record has been beaten?&lt;/h3&gt;
+&lt;p&gt;Our bot will tweet the update, letting the world know that the king is no more with some spicy hashtags (#recovery is a solid choice)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;tweet_changes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;update_status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;choice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nochange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;update_status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;We have &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; new leader(s) today! #strive #gameon&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;change&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'utf8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'ignore'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;segmentShortUrl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shorten_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.strava.com/segments/&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+
+            &lt;span class=&quot;c&quot;&gt;#Generate a status with the different elements and tweet it&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;choice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;middle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;segmentShortUrl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;choice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hashtags&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;api&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;update_status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;center&gt;
+    &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Marc got himself a segment record &lt;a href=&quot;https://t.co/qWRsudIdsx&quot;&gt;https://t.co/qWRsudIdsx&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/recovery?src=hash&quot;&gt;#recovery&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/wasnteventrying?src=hash&quot;&gt;#wasnteventrying&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/stravarun?src=hash&quot;&gt;#stravarun&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/stravabrussels?src=hash&quot;&gt;#stravabrussels&lt;/a&gt;&lt;/p&gt;&amp;mdash; Brussels Strava Bot (@StravaBrussels) &lt;a href=&quot;https://twitter.com/StravaBrussels/status/802233412581031936&quot;&gt;November 25, 2016&lt;/a&gt;&lt;/blockquote&gt;
+    &lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/center&gt;
+
+&lt;h3 id=&quot;can-our-bot-automatically-add-segments-to-scan&quot;&gt;Can our bot automatically add segments to scan?&lt;/h3&gt;
+&lt;p&gt;Indeed! Users can tweet (following a given format) their requests&lt;/p&gt;
+
+&lt;center&gt;
+    &lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;und&quot; dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://twitter.com/StravaBrussels&quot;&gt;@StravaBrussels&lt;/a&gt; add 7179498&lt;/p&gt;&amp;mdash; Robin Rampaer (@rrampaer) &lt;a href=&quot;https://twitter.com/RobinRamp/status/799303818638868480&quot;&gt;November 17, 2016&lt;/a&gt;&lt;/blockquote&gt;
+    &lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/center&gt;
+
+&lt;h2 id=&quot;what-else-can-a-bot-do&quot;&gt;What else can a bot do?&lt;/h2&gt;
+&lt;p&gt;Anything you find useful and/or funny. You could think of a bot that:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;tweets you when your dream camera is on sale, so that you don’t have to press F5 every day.&lt;/li&gt;
+  &lt;li&gt;buys and sales stocks according to your predefined investment strategy&lt;/li&gt;
+  &lt;li&gt;books tickets as soon as they are available&lt;/li&gt;
+  &lt;li&gt;spams the hell out of people on all socia media (disclaimer: don’t)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Robin Rampaer</name></author><category term="products" /><summary type="html">Brussels Strava Bot is a twitter bot that performs daily checks for changes in Strava’s (a popular running app) segments’ leaderboards changes.</summary></entry></feed>

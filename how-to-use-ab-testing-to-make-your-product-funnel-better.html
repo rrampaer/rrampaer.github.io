@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>A/B Testing - The definitive guide to improving your product</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Product | Data | Running" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/how-to-use-ab-testing-to-make-your-product-funnel-better" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Robin Rampaer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="A/B Testing - The definitive guide to improving your product" />
+    <meta property="og:description" content="Go from “we think” to “we know how much”. Whether you are in product, design or growth, you probably come across the following questions: How could we increase our conversion rate? How can we improve our AARRR funnel? How successful has this feature launch been? Have these notifications increased retention?" />
+    <meta property="og:url" content="http://localhost:4000/how-to-use-ab-testing-to-make-your-product-funnel-better" />
+    <meta property="og:image" content="http://localhost:4000/assets/images/ab-testing-cover.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/rrampaer" />
+    <meta property="article:author" content="https://www.facebook.com/rrampaer" />
+    <meta property="article:published_time" content="2018-06-24T12:18:00+02:00" />
+    <meta property="article:modified_time" content="2018-06-24T12:18:00+02:00" />
+    <meta property="article:tag" content="Guides" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="A/B Testing - The definitive guide to improving your product" />
+    <meta name="twitter:description" content="Go from “we think” to “we know how much”. Whether you are in product, design or growth, you probably come across the following questions: How could we increase our conversion rate? How can we improve our AARRR funnel? How successful has this feature launch been? Have these notifications increased retention?" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/ab-testing-cover.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Robin Rampaer" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Guides" />
+    <meta name="twitter:site" content="@rrampaer" />
+    <meta name="twitter:creator" content="@rrampaer" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Robin Rampaer",
+        "logo": "http://localhost:4000/assets/images/blog-icon.png"
+    },
+    "url": "http://localhost:4000/how-to-use-ab-testing-to-make-your-product-funnel-better",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:4000/assets/images/ab-testing-cover.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/how-to-use-ab-testing-to-make-your-product-funnel-better"
+    },
+    "description": "Go from “we think” to “we know how much”. Whether you are in product, design or growth, you probably come across the following questions: How could we increase our conversion rate? How can we improve our AARRR funnel? How successful has this feature launch been? Have these notifications increased retention?"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="A/B Testing - The definitive guide to improving your product" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/blog-icon.png" alt="Robin Rampaer" /></a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <!-- <li class="nav-home" role="menuitem"><a href="/">Home</a></li> -->
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-products" role="menuitem"><a href="/tag/products/">Products</a></li>
+    <li class="nav-guides" role="menuitem"><a href="/tag/guides/">Guides</a></li>
+    <!-- <li class="nav-try-ghost" role="menuitem"><a href="https://ghost.org">Try Ghost</a></li> -->
+</ul>
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+                <a class="social-link social-link-gh" href="https://github.com/rrampaer" target="_blank" rel="noopener"><img src="/assets/images/GitHub-Mark-32px.png" alt="GitHub-Mark" style="height:1.8rem"></a>
+            
+            
+                <a class="social-link social-link-tw" href="https://twitter.com/rrampaer" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+            
+            
+                <a class="social-link social-link-in" href="https://www.linkedin.com/in/rrampaer" target="_blank" rel="noopener"><img src="/assets/images/linkedin-logo.png" alt="LinkedIn-Logo" style="height:1.8rem">
+
+</a>
+            
+        </div>
+        
+            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full post ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="24 June 2018">24 June 2018</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/guides/'>GUIDES</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">A/B Testing - The definitive guide to improving your product</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(/assets/images/ab-testing-cover.jpg)">
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <blockquote>
+  <p>Go from <strong>“we think”</strong> to <strong>“we know how much”</strong>.</p>
+</blockquote>
+
+<h3 id="whether-you-are-in-product-design-or-growth-you-probably-come-across-the-following-questions">Whether you are in product, design or growth, you probably come across the following questions:</h3>
+
+<ul>
+  <li>How could we increase our conversion rate?</li>
+  <li>How can we improve our <a href="https://fr.slideshare.net/dmc500hats/startup-metrics-for-pirates-long-version/19-Product_ulliQ_how_do_you" target="_blank">AARRR</a> funnel?</li>
+  <li>How successful has this feature launch been?</li>
+  <li>Have these notifications increased retention?</li>
+</ul>
+
+<h3 id="you-can-get-answers-to-those-questions-by-correctly-designing-running-and-interpreting-ab-tests">You can get answers to those questions by correctly designing, running, and interpreting A/B tests</h3>
+<p>All you need to get started on your testing journey is:</p>
+<ul>
+  <li><strong>Basic statistics understanding</strong></li>
+  <li><strong>Accurate and sufficient (&gt;1000 monthly unique users) product data</strong></li>
+</ul>
+
+<p>The approach taken is rigorous and encourages best practices but:</p>
+<ul>
+  <li><strong>It will not</strong> demonstrate the maths behind frequentist hypothesis testing.</li>
+  <li><strong>It will not</strong> cover more advanced aspects such as A/B in a Bayesian context, multivariate-testing or Bonferroni correction.</li>
+</ul>
+
+<p>Ready? Let’s get started!</p>
+
+<h2 id="0-understand-that-split-testing-is-a-quantitative-way-to-improve-your-product-and-that-its-easy-to-get-it-wrong">0. Understand that split testing is a quantitative way to improve your product and that it’s easy to get it wrong</h2>
+<p>At its core, A/B testing is a way to compare two versions of a flow in your user journey in order to determine which one performs best.</p>
+
+<p><img src="assets/images/what-ab-test.webp" alt="ab-testing-concept" title="ab-testing-concept" /></p>
+
+<p>To be able to get insights from your tests you will need <strong>enough people in each group</strong> (called <em>control</em> and <em>experiment</em> group, respectively) and <strong>enough of a conversion difference</strong>. Both values should be defined <strong>before</strong> running your test, as you’re about to see in point 3.</p>
+
+<h2 id="1-select-an-important-conversion-step-from-your-products-funnel">1. Select an important conversion step from your product’s funnel</h2>
+<p>Technically you can test anything, like changing the font on your terms and conditions page. However, you always want to pick the steps with the highest impact on your business outcome. Also, keep in mind the importance of <strong>data quantity</strong> - the higher the traffic the faster the conclusions - and of <strong>data quality</strong> - garbage in, garbage out.</p>
+
+<blockquote>
+  <p>Bad data, bad conclusions. Few data, slow conclusions.</p>
+</blockquote>
+
+<p>Let’s get practical and do it for <a href="https://trana.glitch.me?ref=ab-testing-bp" target="_blank">Trana</a>, the example we’ll use for this post.</p>
+
+<p><img src="assets/images/important-funnel-step.png" alt="important-funnel-step" title="important-funnel-step" /></p>
+
+<p>Trana is a Facebook Messenger <em>ChatApp</em> that provides extra running insights to its users. To do so it connects to their Strava account. Therefore, the moment at which we ask users to link their account is key. On top of this instinctive rationale, let’s analyze our full onboarding funnel. This can be done in a tool such as Mixpanel after having <a href="https://segment.com/academy/intro/how-to-create-a-tracking-plan/" target="_blank">designed a tracking plan</a>.</p>
+
+<p><img src="assets/images/full-funnel-conversion.png" alt="full-funnel-conversion" title="full-funnel-conversion" /></p>
+
+<p>We can see that linking the account, going from <em>Onboarding Started</em> to <em>Strava Connected</em>, is the most impactful action both in absolute and relative terms. Got your own important step? Let’s continue!</p>
+
+<h2 id="2-analyse-the-current-click-through-probability-from-this-step-to-a-desired-action">2. Analyse the current <em>Click-through-probability</em> from this step to a desired action</h2>
+<p>The Click-through-probability (CTP) is the probability a given user clicks to get to the next step.</p>
+
+<p>Its value is always between 0 and 1. It’s therefore <strong>not</strong> the same as the click-through-rate (CTR) which is the #clicks/#impression.</p>
+
+<p>The CTP needs to be from the chosen step to a crucial action, not necessarily to the very next step, because you might otherwise end up at a local maximum. Here’s a simple example to understand this: let’s say that you now automatically redirect people from the home page to the pricing/premium page of your product. Your home to pricing conversion will be through the roof but you might want to assess whether people are in turn more likely to become premium users.</p>
+
+<p>In short: optimize with the end, not the very next step, in mind.</p>
+
+<p><img src="assets/images/key-step-click-through-probability.png" alt="key-step-click-through-probability" title="key-step-click-through-probability" /></p>
+
+<p>We have seen from the full funnel that the CTP is 80%. In this case connecting their Strava account is clearly an important milestone so we can use this conversion probability as target metric.</p>
+
+<h2 id="3-construct-a-hypothesis-to-kickstart-your-experiment">3. Construct a hypothesis to kickstart your experiment</h2>
+<p>AB testing is nothing but methodologically assess whether a variation, called <strong>experiment</strong>, performs better than the current situation, called <strong>control</strong>.<br />
+An experiment starts by constructing a hypothesis. It can arise from gut-feeling, customers feedback or team discussions.</p>
+
+<p><img src="assets/images/experiment-hypothesis.png" alt="experiment-hypothesis" title="experiment-hypothesis" /></p>
+
+<p>The hypothesis is the following: <em>By seeing how Trana can help them run smarter, users will be less reluctant to connect their Strava account</em></p>
+
+<h2 id="4-determine-the-sample-size">4. Determine the sample size</h2>
+<p>This is the heart of A/B testing and the most jargon-heavy part of this guide. I’ll be happy to answer <a href="https://twitter.com/home?status=%40RobinRamp%20thanks%20for%20your%20product%20ab%20testing%20guide%20(http%3A//bit.ly/pabtest).%20Question%3A%20xxx%20" target="_blank">any question you might ask on twitter</a>.</p>
+
+<p>Running an A/B test involves creating a control and an experiment <strong>sample</strong>.<br />
+<em>Sampling</em>, assigning each user to one variation, will be done by splitting your users into two groups.<br />
+One user should always see the same variation, meaning that the <strong>sampling is deterministic</strong>, not simply with a 50% probability.<br />
+We usually sample according to odd/even IDs, many tools can take care of that for you.</p>
+
+<p>A common mistake is to ignore sampling, directly change your product, and compare the new conversion probabilities with old ones. <br />
+This is leading teams to bad conclusions because the people coming to your product are changing across time. For example, you can’t say that the new flow (used by people coming from ads) is worst that the old one (that was used by your friends and family) because the seeing it are way less likely to bear with your product to begin with.</p>
+
+<p>Your sample size will be determined by:</p>
+
+<ol>
+  <li>Your baseline conversion rate</li>
+  <li>The absolute <em>minimum detectable effect</em> (MDE/d<em>min</em>) you pick. This is the minimum difference between control and experiment conversion rates you will be able to detect. If you have a lot of weekly traffic (vs the resulting sample size) pick the smallest difference you feel is worth. If you don’t, pick a difference that results in reasonably small sample size but still seems achievable.</li>
+  <li>Alpha (α): By default keep it as 95%</li>
+  <li>Beta (β): By default keep is as 20% which gives a 80% value for 1-β</li>
+</ol>
+
+<p><img src="assets/images/sample-size-computation.png" alt="sample-size-computation" title="sample-size-computation" /></p>
+
+<p>The test will be run until <strong>both</strong> samples have a least 1030 observations. From the historic traffic you can assess how long that’ll be. Try to keep experiments running less than one month. The faster they run, the faster your product improves.</p>
+
+<p><a href="http://www.evanmiller.org/ab-testing/sample-size.html">Compute your sample size</a>, write it down and let the testing begin. Once you have sufficient data you can analyze the results.</p>
+
+<h2 id="5-get-valid-insights-from-your-results">5. Get valid insights from your results</h2>
+<h4 id="51-collect-the-data">5.1 Collect the data.</h4>
+<p>Wait until both variations have sufficient sample size and proceed to the data collection.</p>
+
+<p><img src="assets/images/control-experiment-results.png" alt="control-experiment-results" title="control-experiment-results" /></p>
+
+<p>The experiment conversion is better. It’s a first good sign but we can’t stop there. So let’s proceed to a few checks.</p>
+
+<h4 id="52-make-sure-your-sampling-worked-as-intended">5.2 Make sure your sampling worked as intended.</h4>
+<p>First, check that the sampling was not biased towards one of the groups. Here is the computation for our example:</p>
+
+<p><img src="assets/images/sanity-check-invariants.png" alt="sanity-check-invariants" title="sanity-check-invariants" /></p>
+
+<h4 id="53-check-if-the-experiment-performed-significantly-better">5.3 Check if the experiment performed significantly better.</h4>
+<p>To assess whether the experiment is outperforming the control, plug your figures into the following formulas. d<em>min</em> is the minimum detectable effect, N is the sample size, and X the conversion <strong>count</strong>, the number of people who took the desired action.</p>
+
+<p><img src="assets/images/ab-testing-results.png" alt="ab-testing-results" title="ab-testing-results" /></p>
+
+<p>Where d̂ ± m is the confidence interval.</p>
+
+<p>Here is how to interpret results:</p>
+
+<ul>
+  <li>d̂ - m &gt; d<em>𝑚𝑖𝑛</em>:<br />
+The experiment is outperforming the control (<strong>statistical</strong> and <strong>practical</strong> significance). Change flow to new version.</li>
+  <li>d̂ - m &gt; 0:<br />
+The experiment is outperforming the control (<strong>statistical</strong> significance only). This is the case in <strong>our example</strong>. To get practical significance you can let the test run longer. You can also make a judgement call and go with your gut feeling.</li>
+  <li>d̂ - m &lt; 0:<br />
+You can’t say that the experiment is outperforming the control. Keep the original version and generate new hypotheses.</li>
+</ul>
+
+<h2 id="6-communicate-your-results">6. Communicate your results.</h2>
+<p>Whatever the outcome, <strong>always</strong> communicate and document.</p>
+
+<p>I recommend that you signal when the test starts and when it ends, using these key moments as an opportunity for stakeholders to voice their ideas and be up-to-date with the latest changes.</p>
+
+<p>Also, always document and archive. You want the testing process to outlive you so that anyone taking over has a library of experiments to learn from.</p>
+
+<h3 id="this-guide-was-made-possible-thanks-to-these-amazing-resources">This guide was made possible thanks to these amazing resources:</h3>
+
+<ul>
+  <li><a href="https://eu.udacity.com/course/ab-testing--ud257" target="_blank">Udacity’s A/B Testing Class</a></li>
+  <li><a href="http://www.evanmiller.org/ab-testing/" target="_blank">Evan Miller’s awesome A/B Testing Tools</a></li>
+</ul>
+
+<h3 id="heres-how-you-can-go-further">Here’s how you can go further:</h3>
+
+<ul>
+  <li><a href="http://www.evanmiller.org/sequential-ab-testing.html" target="_blank">Use Sequential Testing to Fasten Results</a></li>
+  <li><a href="http://www.evanmiller.org/sequential-ab-testing.html" target="_blank">Understand Type I and Type II Errors</a></li>
+</ul>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to Robin Rampaer</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    <form method="post" action="https://formspree.io/robin.rampaer@gmail.com" class="">
+    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
+        <input type="hidden" name="_next" value="/" />
+    </div>
+    <button class="" type="submit"><span>Subscribe</span></button>
+    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
+</form>
+
+                </section>
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/images/rampaer-robin.png" alt="robin" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/robin">Robin Rampaer</a></h4>
+                                
+                                    <p>Robin is a business engineer with a passion for data-powered problem solving. Previously intrapreneur at The Studio, a startup factory, he's now freelancing. When not working, he's running, reading, hiking or traveling.</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/robin">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = 'http://localhost:4000/';
+                            this.page.identifier = 'Robin Rampaer';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://rrampaer.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/a-strava-segment-twitter-bot">
+                <div class="post-card-image" style="background-image: url(/assets/images/strava-segment-cover.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/a-strava-segment-twitter-bot">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Products</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">A Strava Segment Twitter Bot</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    <p>Brussels Strava Bot is a twitter bot that performs daily checks for changes in Strava’s (a popular running app) segments’ leaderboards changes. What is a bot anyway? Because the word tends to be</p>
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/rampaer-robin.png" alt="Robin Rampaer" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/robin/">Robin Rampaer</a>
+                        </span>
+                    
+                
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="http://localhost:4000/">
+            
+                <img src="/assets/images/favicon.png" alt="Robin Rampaer icon" />
+            
+            <span>Robin Rampaer</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">A/B Testing - The definitive guide to improving your product</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=A%2FB+Testing+-+The+definitive+guide+to+improving+your+product&amp;url=https://rrampaer.github.io/how-to-use-ab-testing-to-make-your-product-funnel-better"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://rrampaer.github.io/how-to-use-ab-testing-to-make-your-product-funnel-better"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="http://localhost:4000/">Robin Rampaer</a> &copy; 2018</section>
+                <!-- <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section> -->
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    <a href="https://github.com/rrampaer" target="_blank" rel="noopener">Github</a>
+                    <a href="https://twitter.com/rrampaer" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://linkedin.com/in/robin-rampaer-38ba25108" target="_blank" rel="noopener">LinkedIn</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+        <div id="subscribe" class="subscribe-overlay">
+            <a class="subscribe-overlay-close" href="#"></a>
+            <div class="subscribe-overlay-content">
+                
+                    <img class="subscribe-overlay-logo" src="/assets/images/blog-icon.png" alt="Robin Rampaer" />
+                
+                <h1 class="subscribe-overlay-title">Subscribe to Robin Rampaer</h1>
+                <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
+                <form method="post" action="https://formspree.io/robin.rampaer@gmail.com" class="">
+    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
+        <input type="hidden" name="_next" value="/" />
+    </div>
+    <button class="" type="submit"><span>Subscribe</span></button>
+    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
+</form>
+
+            </div>
+        </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!--  Segment Tracking code -->
+ <script>
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+  analytics.load("bDZT1Eo2OcGSd1tqHigIcrqN4J4EKoK8");
+  analytics.page();
+  }}();
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

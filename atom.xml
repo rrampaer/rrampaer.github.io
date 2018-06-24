@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> - Articles</title>
+    <description>Product | Data | Running</description>
+    <link>
+    http://localhost:4000</link>
+    
+      
+      <item>
+        <title>A/B Testing - The definitive guide to improving your product</title>
+        
+          <description>&lt;blockquote&gt;
+  &lt;p&gt;Go from &lt;strong&gt;“we think”&lt;/strong&gt; to &lt;strong&gt;“we know how much”&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        
+        <pubDate>Sun, 24 Jun 2018 10:18:00 +0000</pubDate>
+        <link>
+        http://localhost:4000/how-to-use-ab-testing-to-make-your-product-funnel-better</link>
+        <guid isPermaLink="true">http://localhost:4000/how-to-use-ab-testing-to-make-your-product-funnel-better</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>A Strava Segment Twitter Bot</title>
+        
+          <description>&lt;p&gt;&lt;img src=&quot;assets/images/bsb.PNG&quot; alt=&quot;bsb&quot; title=&quot;Brussels Segments Scanner&quot; /&gt;
+Brussels Strava Bot is a twitter bot that performs daily checks for changes in &lt;a href=&quot;https://www.strava.com&quot; target=&quot;_blank&quot;&gt;Strava&lt;/a&gt;’s (a popular running app) segments’ leaderboards changes.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 26 Nov 2016 10:18:00 +0000</pubDate>
+        <link>
+        http://localhost:4000/a-strava-segment-twitter-bot</link>
+        <guid isPermaLink="true">http://localhost:4000/a-strava-segment-twitter-bot</guid>
+      </item>
+      
+    
+  </channel>
+</rss>
