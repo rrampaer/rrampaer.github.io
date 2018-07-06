@@ -334,7 +334,7 @@ into the {body} of the default.hbs template -->
     }
     }
 
-    var docRoot = document.getElementsByTagName("main")[0];
+    var docRoot = document.getElementsByClassName("post").length > 0 ?  document.getElementsByClassName("post")[0] :document.getElementsByTagName("main")[0];
     var okC = document.createElement("div");
     okC.setAttribute("id", "okCookie");
     var okCp = document.createElement("p");

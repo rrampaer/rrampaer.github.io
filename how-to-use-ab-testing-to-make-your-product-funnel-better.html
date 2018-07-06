@@ -620,7 +620,7 @@ You can’t say that the experiment is outperforming the control. Keep the origi
     }
     }
 
-    var docRoot = document.getElementsByTagName("main")[0];
+    var docRoot = document.getElementsByClassName("post").length > 0 ?  document.getElementsByClassName("post")[0] :document.getElementsByTagName("main")[0];
     var okC = document.createElement("div");
     okC.setAttribute("id", "okCookie");
     var okCp = document.createElement("p");
