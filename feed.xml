@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://rrampaer.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rrampaer.github.io/" rel="alternate" type="text/html" /><updated>2019-07-01T21:36:55+02:00</updated><id>https://rrampaer.github.io/</id><title type="html">Robin Rampaer</title><subtitle>Product | Data | Running</subtitle><entry><title type="html">A/B Testing - The definitive guide to improving your product</title><link href="https://rrampaer.github.io/how-to-use-ab-testing-to-make-your-product-funnel-better" rel="alternate" type="text/html" title="A/B Testing - The definitive guide to improving your product" /><published>2018-06-24T12:18:00+02:00</published><updated>2018-06-24T12:18:00+02:00</updated><id>https://rrampaer.github.io/how-to-use-ab-testing-to-make-your-product-funnel-better</id><content type="html" xml:base="https://rrampaer.github.io/how-to-use-ab-testing-to-make-your-product-funnel-better">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://rrampaer.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rrampaer.github.io/" rel="alternate" type="text/html" /><updated>2019-09-22T21:52:16+02:00</updated><id>https://rrampaer.github.io/</id><title type="html">Robin Rampaer</title><subtitle>Product | Data | Running</subtitle><entry><title type="html">Using feature penetration and frequency to know which to keep, improve or remove</title><link href="https://rrampaer.github.io/product-features-penetration-and-frequency-know-which-to-keep-improve-remove" rel="alternate" type="text/html" title="Using feature penetration and frequency to know which to keep, improve or remove" /><published>2019-09-22T11:09:00+02:00</published><updated>2019-09-22T11:09:00+02:00</updated><id>https://rrampaer.github.io/product-features-penetration-and-frequency-know%20which-to-keep-improve-remove</id><content type="html" xml:base="https://rrampaer.github.io/product-features-penetration-and-frequency-know-which-to-keep-improve-remove">&lt;blockquote&gt;
+  &lt;p&gt;Adding features does not equate improving the product.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;product-teams-should-take-the-time-to-measure-a-features-success&quot;&gt;Product teams should take the time to measure a feature’s success&lt;/h2&gt;
+
+&lt;p&gt;Too often, the product team is already focused on what’s next and no proper follow-up is done after launch. It’s a pity because if you keep shipping unused features you might end up looking like LiveChat in 2006: overweight.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/livechat-contact-center.png&quot; alt=&quot;livechat-contact-center&quot; title=&quot;livechat-contact-center&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;display: block; text-align: center; margin-top: -2.5em; margin-bottom: 2em; font-size: 0.8em; color: grey&quot;&gt;Screenshot of an old version of livechat&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;But how do you know which feature to:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Keep&lt;/li&gt;
+  &lt;li&gt;Improve&lt;/li&gt;
+  &lt;li&gt;Remove&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;mapping-features-a-framework-to-know-if-a-feature-is-worth-it&quot;&gt;Mapping features: a framework to know if a feature is worth it&lt;/h2&gt;
+&lt;p&gt;Ultimately, you want to know:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;How many&lt;/strong&gt; people are using a given feature? aka the &lt;em&gt;Feature Penetration&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;How often&lt;/strong&gt; are they using it? aka the &lt;em&gt;Feature Frequency&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/feature-penetration-frequency-graph.png&quot; alt=&quot;feature-penetration-frequency-graph&quot; title=&quot;feature-penetration-frequency-graph&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;display: block; text-align: center; margin-top: -2.5em; margin-bottom: 2em; font-size: 0.8em; color: grey&quot;&gt;Frequency as vertical axis, penetration as horizontal one&lt;/div&gt;
+&lt;p&gt;The minimum frequency is one since it’s that of users having used the feature. Let’s now map a real product’s features then use the framework to take action.&lt;/p&gt;
+
+&lt;h2 id=&quot;applying-feature-mapping-to-pengo&quot;&gt;Applying feature mapping to Pengo&lt;/h2&gt;
+&lt;p&gt;Pengo is belgian Fintech product letting users easily create and share payment requests. The pitch goes as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;We love to share experiences&lt;/strong&gt;: buying group gifts, grabbing the last tickets to a festival or going on an epic road trip.&lt;/p&gt;
+
+&lt;p&gt;But &lt;strong&gt;the way we ask each other for paybacks is broken&lt;/strong&gt;: finding back your IBAN, typing it or taking a picture of your bank card then checking who has not yet paid you and sending awkward reminders. This is 2018 and we believe we can do better!&lt;/p&gt;
+
+&lt;p&gt;Pengo &lt;strong&gt;solves that problem&lt;/strong&gt;. Pengo is a free, quick and easy way to create and share payment requests.
+All you need to do is talk to Pengo on Messenger (you don’t need to download an extra App) and tell him the amount, reason, and IBAN (bank account number) you want to receive the money on. He’ll inform you when someone pays you back and will give you an overview and the possibility to send reminders.&lt;/p&gt;
+
+&lt;p&gt;Pengo was born in The Studio, Belfius’ Brussels-based startup factory, and was launched in February 2018.&lt;/p&gt;
+
+&lt;p&gt;Alright, enough said! Here is the mapping for some of Pengo’s features over a 1-month period:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/images/feature-penetration-frequency-graph-filled.png&quot; alt=&quot;feature-penetration-frequency-graph-filled&quot; title=&quot;feature-penetration-frequency-graph-filled&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;display: block; text-align: center; margin-top: -2.5em; margin-bottom: 2em; font-size: 0.8em; color: grey&quot;&gt;Filling the matrix with usage data&lt;/div&gt;
+&lt;p&gt;Although numbers are missing this is the actual mapping.&lt;/p&gt;
+
+&lt;h3 id=&quot;core-features-are-used-by-everyone&quot;&gt;Core features are used by everyone&lt;/h3&gt;
+&lt;p&gt;Creating a payment request (&lt;strong&gt;💰 Payment Request Created&lt;/strong&gt;) is, from what we see, a &lt;strong&gt;Core feature&lt;/strong&gt;: used by many relatively often. This is often the category of foundational features: login, menu select, etc,.&lt;/p&gt;
+
+&lt;h3 id=&quot;niche-features-are-tricky-to-deal-with&quot;&gt;Niche features are tricky to deal with&lt;/h3&gt;
+&lt;p&gt;Editing the IBAN you request money to (&lt;strong&gt;✏️ IBAN Edited&lt;/strong&gt;) is a &lt;strong&gt;Niche feature&lt;/strong&gt;: used by few but extensively. This is especially tricky to assess. Almost nobody is getting value out of it but those who are seem to get much out of it. A rule of thumb is to identify if those using that feature are “good”, however you define it, users. In our case these users then to share a lot of payment requests with their friends and therefore we’re keeping the feature and thinking of improving it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;🕵️ ♂️ Ticket Scanned&lt;/strong&gt; is, we think, a super cool add-on: the ability to create a payment request from a receipt. You snap a picture, mention how many take part and Pengo creates a payment request for you.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;fr&quot; dir=&quot;ltr&quot;&gt;Est-ce que tu savais que je pouvais prendre une photo de ton ticket de caisse et lire le montant qui est dessus? Tout ça grâce à la technologie de reconnaissance optique de caractères! 😎 &lt;a href=&quot;https://twitter.com/hashtag/ROC?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#ROC&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/OCR?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#OCR&lt;/a&gt;&lt;br /&gt; Et oui, je deviens de plus en plus malin🤓&lt;a href=&quot;https://twitter.com/hashtag/Pengo?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#Pengo&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/chatbot?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#chatbot&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/newfeature?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#newfeature&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/AI?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#AI&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/tech?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#tech&lt;/a&gt; &lt;a href=&quot;https://t.co/CY1xheg9kM&quot;&gt;pic.twitter.com/CY1xheg9kM&lt;/a&gt;&lt;/p&gt;&amp;mdash; Pengo (@meet_pengo) &lt;a href=&quot;https://twitter.com/meet_pengo/status/986248026514706432?ref_src=twsrc%5Etfw&quot;&gt;April 17, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;It’s however risking to become a &lt;strong&gt;Zombie feature&lt;/strong&gt;: used rarely by few. To avoid that, let’s explore the actions you can take from the mapping&lt;/p&gt;
+
+&lt;h2 id=&quot;turning-mapping-into-actions&quot;&gt;Turning mapping into actions&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;assets/images/increase-penetration-frequency.png&quot; alt=&quot;increase-penetration-frequency&quot; title=&quot;increase-penetration-frequency&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are two ways you can &lt;strong&gt;increase the value&lt;/strong&gt; provided by a given feature:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make it known and used by &lt;strong&gt;more users&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Help the current users &lt;strong&gt;increase their usage&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To &lt;strong&gt;increase the count of users&lt;/strong&gt; we could think of adding the feature in the onboarding, making it more accessible in the navigation or sending push notifications to people who have not tried it yet.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Increasing the usage&lt;/strong&gt; could be achieved by qualitative research with the aim of reducing the current friction as much as possible or add extra value to specific use cases. One thing we see is that people sometime still send a picture of the receipt, we could add it to the payment request, in the Pengo card or elsewhere.&lt;/p&gt;
+
+&lt;p&gt;If despite all your efforts you don’t see the feature moving in the right direction it might be wise to &lt;strong&gt;remove the feature&lt;/strong&gt; as it’s probably adding more noise than value to your product. The functional and technical complexities it adds might not obvious at first but the load only gets heavier as time passes.&lt;/p&gt;</content><author><name>Robin Rampaer</name></author><category term="guides" /><summary type="html">Adding features does not equate improving the product.</summary></entry><entry><title type="html">A/B Testing - The definitive guide to improving your product</title><link href="https://rrampaer.github.io/how-to-use-ab-testing-to-make-your-product-funnel-better" rel="alternate" type="text/html" title="A/B Testing - The definitive guide to improving your product" /><published>2018-06-24T12:18:00+02:00</published><updated>2018-06-24T12:18:00+02:00</updated><id>https://rrampaer.github.io/how-to-use-ab-testing-to-make-your-product-funnel-better</id><content type="html" xml:base="https://rrampaer.github.io/how-to-use-ab-testing-to-make-your-product-funnel-better">&lt;blockquote&gt;
   &lt;p&gt;Go from &lt;strong&gt;“I think”&lt;/strong&gt; to &lt;strong&gt;“I know how much”&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
