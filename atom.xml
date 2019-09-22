@@ -44,7 +44,7 @@
       <item>
         <title>A Strava Segment Twitter Bot</title>
         
-          <description>&lt;p&gt;&lt;img src=&quot;assets/images/bsb.PNG&quot; alt=&quot;bsb&quot; title=&quot;Brussels Segments Scanner&quot; /&gt;
+          <description>&lt;p&gt;&lt;img src=&quot;assets/images/bsb.png&quot; alt=&quot;bsb&quot; title=&quot;Brussels Segments Scanner&quot; /&gt;
 Brussels Strava Bot is a twitter bot that performs daily checks for changes in &lt;a href=&quot;https://www.strava.com&quot; target=&quot;_blank&quot;&gt;Strava&lt;/a&gt;’s (a popular running app) segments’ leaderboards changes.&lt;/p&gt;
 
 </description>
