@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://rrampaer.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rrampaer.github.io/" rel="alternate" type="text/html" /><updated>2020-04-10T12:54:13+02:00</updated><id>https://rrampaer.github.io/</id><title type="html">Robin Rampaer</title><subtitle>Product | Data | Running</subtitle><entry><title type="html">How to do usability testing to improve your user experience</title><link href="https://rrampaer.github.io/how-to-do-usability-testing" rel="alternate" type="text/html" title="How to do usability testing to improve your user experience" /><published>2020-04-09T13:46:00+02:00</published><updated>2020-04-09T13:46:00+02:00</updated><id>https://rrampaer.github.io/how-to-do-usability-testing</id><content type="html" xml:base="https://rrampaer.github.io/how-to-do-usability-testing">&lt;h2 id=&quot;your-users-are-getting-lost-and-confused-without-you-knowing-it&quot;&gt;Your users are getting lost and confused without you knowing it&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://rrampaer.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://rrampaer.github.io/" rel="alternate" type="text/html" /><updated>2020-04-12T15:28:12+02:00</updated><id>https://rrampaer.github.io/</id><title type="html">Robin Rampaer</title><subtitle>Product | Data | Running</subtitle><entry><title type="html">How to do usability testing to improve your user experience</title><link href="https://rrampaer.github.io/how-to-do-usability-testing" rel="alternate" type="text/html" title="How to do usability testing to improve your user experience" /><published>2020-04-09T13:46:00+02:00</published><updated>2020-04-09T13:46:00+02:00</updated><id>https://rrampaer.github.io/how-to-do-usability-testing</id><content type="html" xml:base="https://rrampaer.github.io/how-to-do-usability-testing">&lt;h2 id=&quot;your-users-are-getting-lost-and-confused&quot;&gt;Your users are getting lost and confused&lt;/h2&gt;
 &lt;p&gt;Your app or website might be super valuable to your users, but if they can’t quickly figure out how to use it, many will give up and leave.&lt;/p&gt;
 
 &lt;p&gt;This is what happens on most government websites, you can’t really escape filling in your tax report, but it feels as if they had tried to make it as hard as possible for you to achieve what you thought would be a 2-minute ordeal.
@@ -21,110 +21,91 @@ Unfortunately for you, using your app is probably not as important to your users
 &lt;p&gt;So go outside or send a few emails, find some users ready to take 15 minutes with you, and get testing.&lt;/p&gt;
 
 &lt;h2 id=&quot;how-to-run-a-test&quot;&gt;How to run a test&lt;/h2&gt;
+&lt;h3 id=&quot;set-proper-context&quot;&gt;Set proper context:&lt;/h3&gt;
 &lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Set proper context&lt;/strong&gt;
-    &lt;ol&gt;
-      &lt;li&gt;Thank them for taking parts&lt;/li&gt;
-      &lt;li&gt;Ask if it’s still ok to take XX mins and if ok for you to record it (if applicable)&lt;/li&gt;
-      &lt;li&gt;Mention that the goal is to perform a set of tasks, not to focus on design details&lt;/li&gt;
-      &lt;li&gt;Reassure them by saying that you’re testing the app not them&lt;/li&gt;
-      &lt;li&gt;Inform them that this is a test environment (or mockup) so can’t break anything and it’s normal if some things are not working&lt;/li&gt;
-      &lt;li&gt;Ask if they have any question, if not, let’s get started&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Perform and assess the tasks&lt;/strong&gt;
-    &lt;ol&gt;
-      &lt;li&gt;Those tasks should be based on a set of pre-defined assumptions. You want to test for the most crucial / risky flows.&lt;br /&gt;
-Ex: &lt;em&gt;“We think it’ll be obvious to the user where to find their message once sent”&lt;/em&gt;
-        &lt;ol&gt;
-          &lt;li&gt;
-            &lt;p&gt;Instruct the person to perform the tasks&lt;/p&gt;
+  &lt;li&gt;Thank them for taking parts&lt;/li&gt;
+  &lt;li&gt;Ask if it’s still ok to take XX mins and if ok for you to record it (if applicable)&lt;/li&gt;
+  &lt;li&gt;Mention that the goal is to perform a set of tasks, not to focus on design details&lt;/li&gt;
+  &lt;li&gt;Reassure them by saying that you’re testing the app not them&lt;/li&gt;
+  &lt;li&gt;Inform them that this is a test environment (or mockup) so can’t break anything and it’s normal if some things are not working&lt;/li&gt;
+  &lt;li&gt;Ask if they have any question, if not, let’s get started&lt;/li&gt;
+&lt;/ol&gt;
 
-            &lt;ul&gt;
-              &lt;li&gt;&lt;strong&gt;Don’t:&lt;/strong&gt; Tell them where to click, what to look for
-                &lt;blockquote&gt;
-                  &lt;p&gt;“&lt;strong&gt;Click&lt;/strong&gt; the message button” ❌&lt;/p&gt;
-                &lt;/blockquote&gt;
-              &lt;/li&gt;
-              &lt;li&gt;&lt;strong&gt;Don’t:&lt;/strong&gt; Use the exact copy of the UI
-                &lt;blockquote&gt;
-                  &lt;p&gt;“Please &lt;strong&gt;send a message&lt;/strong&gt; to Capital Panache” ❌&lt;/p&gt;
-                &lt;/blockquote&gt;
-              &lt;/li&gt;
-              &lt;li&gt;&lt;strong&gt;Do:&lt;/strong&gt; Tell them what to achive in everyday language
-                &lt;blockquote&gt;
-                  &lt;p&gt;“Please &lt;strong&gt;get in touch with&lt;/strong&gt; Capital Panache” ✔️&lt;/p&gt;
-                &lt;/blockquote&gt;
-              &lt;/li&gt;
-              &lt;li&gt;&lt;strong&gt;Don’t:&lt;/strong&gt; Answer their question
-                &lt;blockquote&gt;
-                  &lt;p&gt;&lt;strong&gt;User:&lt;/strong&gt; “What happens if I click the button?”&lt;br /&gt;
+&lt;h3 id=&quot;perform-and-assess-the-tasks&quot;&gt;Perform and assess the tasks:&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Those tasks should be based on a set of pre-defined assumptions. You want to test for the most crucial / risky flows.&lt;br /&gt;
+Ex: &lt;em&gt;“We think it’ll be obvious to the user where to find their message once sent”&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Instruct the person to perform the tasks&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Don’t:&lt;/strong&gt; Tell them where to click, what to look for&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“&lt;strong&gt;Click&lt;/strong&gt; the message button” ❌&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Don’t:&lt;/strong&gt; Use the exact copy of the UI&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“Please &lt;strong&gt;send a message&lt;/strong&gt; to Capital Panache” ❌&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Do:&lt;/strong&gt; Tell them what to achive in everyday language&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“Please &lt;strong&gt;get in touch with&lt;/strong&gt; Capital Panache” ✔️&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Don’t:&lt;/strong&gt; Answer their question&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;User:&lt;/strong&gt; “What happens if I click the button?”&lt;br /&gt;
 &lt;strong&gt;You:&lt;/strong&gt; “Oh, that sends a message to the agency” ❌&lt;/p&gt;
-                &lt;/blockquote&gt;
-              &lt;/li&gt;
-              &lt;li&gt;&lt;strong&gt;Do:&lt;/strong&gt; Ask what they think in order to understand their assumptions
-                &lt;blockquote&gt;
-                  &lt;p&gt;&lt;strong&gt;User:&lt;/strong&gt; “What happens if I click the button?”&lt;br /&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Do:&lt;/strong&gt; Ask what they think in order to understand their assumptions&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;User:&lt;/strong&gt; “What happens if I click the button?”&lt;br /&gt;
 &lt;strong&gt;You:&lt;/strong&gt; “Mmmh, what do you think?” ✔️&lt;br /&gt;
 &lt;strong&gt;User:&lt;/strong&gt; “I guess it’ll open some kind of inbox”&lt;br /&gt;
 &lt;strong&gt;You:&lt;/strong&gt; “Like in a popup kinda like messenger on Facebook”&lt;br /&gt;
 &lt;strong&gt;User:&lt;/strong&gt; “Oh ok, well, can you try?” ✔️&lt;/p&gt;
-                &lt;/blockquote&gt;
-              &lt;/li&gt;
-              &lt;li&gt;&lt;strong&gt;Do:&lt;/strong&gt; Ask what were their thoughts when you read interesting body language
-                &lt;blockquote&gt;
-                  &lt;p&gt;&lt;strong&gt;User:&lt;/strong&gt; *Frown* then *looks like EUREKA!*&lt;br /&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Do:&lt;/strong&gt; Ask what were their thoughts when you read interesting body language&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;User:&lt;/strong&gt; *Frown* then *looks like EUREKA!*&lt;br /&gt;
 &lt;strong&gt;You:&lt;/strong&gt; “Ah! Have you discovered something?” ✔️&lt;br /&gt;
 &lt;strong&gt;User:&lt;/strong&gt; “YES! I thought it was a cancel but then I saw the red label so I understood it was more of a delete?”&lt;/p&gt;
-                &lt;/blockquote&gt;
-              &lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Note whether each task was:
-        &lt;ol&gt;
-          &lt;li&gt;Succesful → Found and perfomed the target action without problem&lt;/li&gt;
-          &lt;li&gt;Friction → A bit hard but could manage&lt;/li&gt;
-          &lt;li&gt;Blocking → Could not perform it without external help&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Wrap up&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-    &lt;ol&gt;
-      &lt;li&gt;Thank them again for taking part&lt;/li&gt;
-      &lt;li&gt;Inform them what are your next step, if you plan on communicating back to them, mention it and ask what channel would be suit them&lt;/li&gt;
-      &lt;li&gt;Ask if they have any extra feedback / question / ideas&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Capture and act upon the learnings&lt;/strong&gt;
-    &lt;ol&gt;
-      &lt;li&gt;&lt;strong&gt;Don’t rush&lt;/strong&gt;: usually it takes 5-6 person to see trends appear. Don’t fix everything you see before either being convinced yourself or seeing it happen multiple times.&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;strong&gt;Summarize the learnings&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note whether each task was:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Succesful&lt;/em&gt; → Found and perfomed the target action without problem&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Adding Friction&lt;/em&gt; → A bit hard but could manage&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Blocking&lt;/em&gt; → Could not perform it without external help&lt;/li&gt;
+&lt;/ul&gt;
 
-        &lt;p&gt;A great framework is for each key action to list:&lt;/p&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;strong&gt;&lt;em&gt;We thought that&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;&lt;em&gt;We saw that&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;&lt;em&gt;Therefore we will&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-        &lt;/ul&gt;
+&lt;h3 id=&quot;wrap-up&quot;&gt;Wrap up&lt;/h3&gt;
 
-        &lt;p&gt;Ex:&lt;/p&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;strong&gt;&lt;em&gt;We thought that&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;the user would understand that search was performed on each action&lt;/em&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;&lt;em&gt;We saw that&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;most users don’t understand the search has been performed and look for a search CTA&lt;/em&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;&lt;em&gt;Therefore we will&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;add the CTA while keeping the hot refresh&lt;/em&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Make it painful:&lt;/strong&gt;
-People don’t have your context and will likely doubt your findings, therefore it’s great to have videos or data to highlight the main problems encountered and make everyone feel the pain of the users.&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
+&lt;ol&gt;
+  &lt;li&gt;Thank them again for taking part&lt;/li&gt;
+  &lt;li&gt;Inform them what are your next step, if you plan on communicating back to them, mention it and ask what channel would be suit them&lt;/li&gt;
+  &lt;li&gt;Ask if they have any extra feedback / question / ideas&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h3 id=&quot;capture-and-act-upon-the-learnings&quot;&gt;Capture and act upon the learnings&lt;/h3&gt;
+&lt;p&gt;Don’t rush! It usually takes 5-6 person to see trends appear. Don’t fix everything you see before either being convinced yourself or seeing it happen multiple times.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Summarize the learnings&lt;/strong&gt;&lt;br /&gt;
+A great framework is to have the following assessment for each key action:&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;We thought that&lt;/em&gt;&lt;/strong&gt; … &lt;strong&gt;&lt;em&gt;We saw that&lt;/em&gt;&lt;/strong&gt; … &lt;strong&gt;&lt;em&gt;Therefore we will&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;We thought that&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;the user would understand that search was performed on each action&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;We saw that&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;most users don’t understand the search has been performed and look for a search CTA&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;Therefore we will&lt;/em&gt;&lt;/strong&gt; &lt;em&gt;add the CTA while keeping the hot refresh&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Make it painful:&lt;/strong&gt;
+People don’t have your context and will likely doubt your findings, therefore it’s great to have videos or data to highlight the main problems encountered and make everyone feel the pain of the users.&lt;/p&gt;
 
 &lt;h2 id=&quot;want-to-get-started-or-go-further&quot;&gt;Want to get started or go further?&lt;/h2&gt;
 
@@ -141,7 +122,7 @@ People don’t have your context and will likely doubt your findings, therefore 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://maze.design&quot;&gt;Maze.design&lt;/a&gt; is a slick tool allowing you to do remote asynchronous usability testing. We’ve done this with our Invision or Figma prototypes.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.markup.io&quot;&gt;Markup.io&lt;/a&gt; is an easy way to get feedback on a live website.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Robin Rampaer</name></author><category term="guides" /><summary type="html">Your users are getting lost and confused without you knowing it Your app or website might be super valuable to your users, but if they can’t quickly figure out how to use it, many will give up and leave.</summary></entry><entry><title type="html">Using feature penetration and frequency to know which to keep, improve or remove</title><link href="https://rrampaer.github.io/product-features-penetration-and-frequency-know-which-to-keep-improve-remove" rel="alternate" type="text/html" title="Using feature penetration and frequency to know which to keep, improve or remove" /><published>2019-09-22T11:09:00+02:00</published><updated>2019-09-22T11:09:00+02:00</updated><id>https://rrampaer.github.io/product-features-penetration-and-frequency-know%20which-to-keep-improve-remove</id><content type="html" xml:base="https://rrampaer.github.io/product-features-penetration-and-frequency-know-which-to-keep-improve-remove">&lt;blockquote&gt;
+&lt;/ul&gt;</content><author><name>Robin Rampaer</name></author><category term="guides" /><summary type="html">Your users are getting lost and confused Your app or website might be super valuable to your users, but if they can’t quickly figure out how to use it, many will give up and leave.</summary></entry><entry><title type="html">Using feature penetration and frequency to know which to keep, improve or remove</title><link href="https://rrampaer.github.io/product-features-penetration-and-frequency-know-which-to-keep-improve-remove" rel="alternate" type="text/html" title="Using feature penetration and frequency to know which to keep, improve or remove" /><published>2019-09-22T11:09:00+02:00</published><updated>2019-09-22T11:09:00+02:00</updated><id>https://rrampaer.github.io/product-features-penetration-and-frequency-know%20which-to-keep-improve-remove</id><content type="html" xml:base="https://rrampaer.github.io/product-features-penetration-and-frequency-know-which-to-keep-improve-remove">&lt;blockquote&gt;
   &lt;p&gt;Adding features does not equate improving the product.&lt;/p&gt;
 &lt;/blockquote&gt;
 
